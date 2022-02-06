@@ -16,9 +16,12 @@ def get_postalcode_by_post_name(code: str)-> Optional[str]:
     answer = []
     answerStr = ""
 
+
     for key, value in data.items():
-        if code.upper() == value:
+        if code.upper().replace(" ","") == value:
             answer.append(key)
+
+
 
     answer.sort()
 
