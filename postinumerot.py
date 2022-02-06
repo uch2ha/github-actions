@@ -18,7 +18,7 @@ def get_postalcode_by_post_name(code: str)-> Optional[str]:
 
 
     for key, value in data.items():
-        if code.upper().replace(" ","") == value:
+        if (code.upper().replace(" ","") == value) | (code.upper() == value):
             answer.append(key)
 
 
